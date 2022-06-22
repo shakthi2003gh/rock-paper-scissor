@@ -13,7 +13,10 @@ buttons.forEach((button) => {
     const userValue = e.target.value;
 
     displayimage[0].src = `/assets/${userValue}.webp`;
+    displayimage[0].alt = userValue;
+
     displayimage[1].src = `/assets/${computerValue}.webp`;
+    displayimage[1].alt = computerValue;
 
     if (
       (userValue === options[0] && computerValue === options[2]) ||
@@ -40,8 +43,5 @@ buttons.forEach((button) => {
         displayDraw.innerText = "VS";
       }, 500);
     }
-
-    console.log(userValue, computerValue);
-    console.log(userPoints, computerPoints);
   });
 });
